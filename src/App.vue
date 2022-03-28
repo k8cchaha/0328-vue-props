@@ -1,17 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <PropsTest :msg="data" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import PropsTest from "@/components/PropsTest.vue";
+import { ref } from "@vue/reactivity";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    PropsTest,
+  },
+  setup() {
+    const data = ref("Hello Alex!");
+    return { data };
+  },
+};
 </script>
 
 <style lang="scss">
