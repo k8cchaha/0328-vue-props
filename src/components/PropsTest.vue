@@ -4,7 +4,12 @@
 
 <script>
 export default {
-  props: ["msg"],
+  props: {
+    msg: {
+      type: String,
+      default: "Hello Hello World",
+    },
+  },
   setup(props) {
     return { props };
   },
