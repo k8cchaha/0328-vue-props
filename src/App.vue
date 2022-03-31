@@ -3,6 +3,7 @@
   <TitleBar :handListShow="HandListShow" />
   <ListItem :isOpen="isOpen" />
   <EmitTest @hihi="handleCallBack" />
+  <TimerBox @TimeOut="handleTimeOut" />
 </template>
 
 <script>
@@ -10,6 +11,7 @@ import PropsTest from "@/components/PropsTest.vue";
 import TitleBar from "@/components/TitleBar.vue";
 import ListItem from "@/components/ListItem.vue";
 import EmitTest from "@/components/EmitTest.vue";
+import TimerBox from "@/components/TimerBox.vue";
 
 import { ref } from "@vue/reactivity";
 export default {
@@ -19,6 +21,7 @@ export default {
     TitleBar,
     ListItem,
     EmitTest,
+    TimerBox,
   },
   setup() {
     const data = ref("Hello Alex!");
@@ -32,7 +35,11 @@ export default {
       console.log("CallBack:", num);
     };
 
-    return { data, isOpen, HandListShow, handleCallBack };
+    const handleTimeOut = (num) => {
+      console.log("Time is over: ", num.value);
+    };
+
+    return { data, isOpen, HandListShow, handleCallBack, handleTimeOut };
   },
 };
 </script>
