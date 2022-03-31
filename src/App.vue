@@ -4,6 +4,7 @@
   <ListItem :isOpen="isOpen" />
   <EmitTest @hihi="handleCallBack" />
   <TimerBox @TimeOut="handleTimeOut" />
+  <TransitionBox />
 </template>
 
 <script>
@@ -12,8 +13,10 @@ import TitleBar from "@/components/TitleBar.vue";
 import ListItem from "@/components/ListItem.vue";
 import EmitTest from "@/components/EmitTest.vue";
 import TimerBox from "@/components/TimerBox.vue";
+import TransitionBox from "./components/TransitionBox.vue";
 
 import { ref } from "@vue/reactivity";
+
 export default {
   name: "App",
   components: {
@@ -22,6 +25,7 @@ export default {
     ListItem,
     EmitTest,
     TimerBox,
+    TransitionBox,
   },
   setup() {
     const data = ref("Hello Alex!");
