@@ -12,6 +12,9 @@
       <h2>It's Slot</h2>
     </div>
   </slot-try>
+  <slot-try>
+    <h2>It's Slot222</h2>
+  </slot-try>
 </template>
 
 <script>
