@@ -6,6 +6,7 @@
   <TimerBox @TimeOut="handleTimeOut" />
   <TransitionBox />
   <EventBack />
+  <TemplateRef />
 </template>
 
 <script>
@@ -16,6 +17,7 @@ import EmitTest from "@/components/EmitTest.vue";
 import TimerBox from "@/components/TimerBox.vue";
 import TransitionBox from "./components/TransitionBox.vue";
 import EventBack from "./components/EventBack.vue";
+import TemplateRef from "./components/TemplateRef.vue";
 
 import { ref } from "@vue/reactivity";
 
@@ -29,6 +31,7 @@ export default {
     TimerBox,
     TransitionBox,
     EventBack,
+    TemplateRef,
   },
   setup() {
     const data = ref("Hello Alex!");
