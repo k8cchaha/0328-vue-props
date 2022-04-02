@@ -5,6 +5,7 @@
   <EmitTest @hihi="handleCallBack" />
   <TimerBox @TimeOut="handleTimeOut" />
   <TransitionBox />
+  <EventBack />
 </template>
 
 <script>
@@ -14,6 +15,7 @@ import ListItem from "@/components/ListItem.vue";
 import EmitTest from "@/components/EmitTest.vue";
 import TimerBox from "@/components/TimerBox.vue";
 import TransitionBox from "./components/TransitionBox.vue";
+import EventBack from "./components/EventBack.vue";
 
 import { ref } from "@vue/reactivity";
 
@@ -26,6 +28,7 @@ export default {
     EmitTest,
     TimerBox,
     TransitionBox,
+    EventBack,
   },
   setup() {
     const data = ref("Hello Alex!");
