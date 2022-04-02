@@ -7,6 +7,11 @@
   <TransitionBox />
   <EventBack />
   <TemplateRef />
+  <slot-try>
+    <div>
+      <h2>It's Slot</h2>
+    </div>
+  </slot-try>
 </template>
 
 <script>
@@ -18,6 +23,7 @@ import TimerBox from "@/components/TimerBox.vue";
 import TransitionBox from "./components/TransitionBox.vue";
 import EventBack from "./components/EventBack.vue";
 import TemplateRef from "./components/TemplateRef.vue";
+import SlotTry from "./components/SlotTry.vue";
 
 import { ref } from "@vue/reactivity";
 
@@ -32,6 +38,7 @@ export default {
     TransitionBox,
     EventBack,
     TemplateRef,
+    SlotTry,
   },
   setup() {
     const data = ref("Hello Alex!");
